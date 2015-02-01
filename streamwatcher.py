@@ -65,7 +65,7 @@ def main():
                     username_list.append(user)
             
             for username in username_list:
-                user = tweepy.API().get_user(username)
+                user = tweepy.API(auth).get_user(username)
                 userid_list.append(user.id)
             
             follow_list = userid_list
